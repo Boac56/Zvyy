@@ -1,20 +1,16 @@
 import platform
 import sys
 import psutil
-
 my_system = platform.uname()
-
 print("Welcome to Zvyy!")
 print("Note: made for fun.")
 print("Type 'cmds' to see a list of commands")
-
 while True:
     cmd = input("$~ ")
     if cmd == "cpu":
         print(f"Processor: {my_system.processor}")
     elif cmd == "cmds":
         print('Command List: exit, kernel, python_version, host, machine, system, cpu_times, virtual_memory, swap_memory, disk_partitions, disk_usage, sensors_temperatures, users')
-
     elif cmd == "kernel":
         print(f"Kernel: {my_system.release}")
     elif cmd == "python_version":
@@ -41,5 +37,4 @@ while True:
         print(f"Users: {psutil.users()}")
     elif cmd == "exit":
         print(sys.exit())
-    else:
-        print("Unknown Command")
+    else: print("Unknown Command")
